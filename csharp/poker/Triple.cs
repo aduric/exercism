@@ -5,21 +5,14 @@ using System.Text;
 namespace Poker
 {
     class Triple : IHand {
-        public IList<Card> GetCards() {
-            throw new NotImplementedException();
-        }
 
-        public IHand GetPrimaryPartialHand() {
-            return this;
+        public Triple( IList<Card> cards ) {
+            Cards = cards;
         }
-
-        public IHand GetSecondaryPartialHand() {
-            return new None();
-        }
-
-        public Rank GetRank() {
-            throw new NotImplementedException();
-        }
+        public IList<Card> Cards { get; }
+        public IHand PrimaryPartialHand => this;
+        public IHand SecondaryPartialHand => new None( Cards );
+        public Rank Rank => Rank.Triple;
 
     }
 }

@@ -6,22 +6,14 @@ namespace Poker
 {
     class FullHouse : IHand
     {
-
-        public IList<Card> GetCards() {
-            throw new NotImplementedException();
+        public FullHouse( IList<Card> cards ) {
+            Cards = cards;
         }
 
-        public IHand GetPrimaryPartialHand() {
-            return new Triple();
-        }
-
-        public IHand GetSecondaryPartialHand() {
-            return new Pair();
-        }
-
-        public Rank GetRank() {
-            return Rank.FullHouse;
-        }
+        public IList<Card> Cards { get; }
+        public IHand PrimaryPartialHand => new Triple(Cards);
+        public IHand SecondaryPartialHand => new Pair(Cards);
+        public Rank Rank => Rank.FullHouse;
 
     }
 }

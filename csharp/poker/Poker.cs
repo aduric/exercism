@@ -9,7 +9,7 @@ namespace Poker {
             var mappedHands = MapHands( hands );
             mappedHands.Sort();
 
-            return mappedHands.Select( h => String.Join(" ", h.GetCards()) );
+            return mappedHands.Select( h => String.Join(" ", h.Cards) );
         }
 
         public static List<IHand> MapHands( IEnumerable<string> hands ) {

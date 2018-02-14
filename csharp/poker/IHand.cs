@@ -5,11 +5,11 @@ using System.Text;
 namespace Poker {
     public interface IHand
     {
-        IList<Card> GetCards();
-        IHand GetPrimaryPartialHand();
+        IList<Card> Cards { get; }
+        IHand PrimaryPartialHand { get; }
 
-        IHand GetSecondaryPartialHand();
+        IHand SecondaryPartialHand { get; }
 
-        Rank GetRank();
+        Rank Rank { get; }
     }
 }

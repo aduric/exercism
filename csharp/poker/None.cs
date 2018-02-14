@@ -3,21 +3,15 @@
 namespace Poker {
     internal class None : IHand {
 
-        public IList<Card> GetCards() {
-            throw new System.NotImplementedException();
+        public None( IList<Card> cards) {
+            Cards = cards;
         }
 
-        public IHand GetPrimaryPartialHand() {
-            return this;
-        }
+        public IList<Card> Cards { get; }
 
-        public IHand GetSecondaryPartialHand() {
-            return this;
-        }
-
-        public Rank GetRank() {
-            return Rank.None;
-        }
+        public IHand PrimaryPartialHand => this;
+        public IHand SecondaryPartialHand => this;
+        public Rank Rank => Rank.None;
 
     }
 }

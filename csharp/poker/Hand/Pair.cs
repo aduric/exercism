@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using Poker.Deck;
 
-namespace Poker
+namespace Poker.Hand
 {
     class Pair : IHand
     {

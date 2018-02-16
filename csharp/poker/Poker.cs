@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
+using Poker.Hand;
 
 namespace Poker {
     public static class Poker {

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Poker.Deck;
 
-namespace Poker {
+namespace Poker.Hand {
     internal class None : IHand {
 
         public None( IList<Card> cards) {

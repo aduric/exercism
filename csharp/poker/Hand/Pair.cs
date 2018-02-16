@@ -3,7 +3,7 @@ using Poker.Deck;
 
 namespace Poker.Hand
 {
-    class Pair : IHand
+    internal class Pair : IHand
     {
 
         public Pair( IList<Card> cards ) {

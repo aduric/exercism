@@ -3,7 +3,7 @@ using Poker.Deck;
 
 namespace Poker.Hand
 {
-    class FullHouse : IHand
+    internal class FullHouse : IHand
     {
         public FullHouse( IList<Card> cards ) {
             Cards = cards;

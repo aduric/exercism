@@ -4,7 +4,7 @@ using Poker.Deck;
 namespace Poker.Hand {
     public interface IHand
     {
-        IList<Card> Cards { get; }
+        IEnumerable<Card> Cards { get; }
         IHand PrimaryPartialHand { get; }
 
         IHand SecondaryPartialHand { get; }

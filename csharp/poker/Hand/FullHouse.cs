@@ -1,17 +1,20 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Poker.Deck;
 
 namespace Poker.Hand
 {
     internal class FullHouse : IHand
     {
-        public FullHouse( IList<Card> cards ) {
-            Cards = cards;
+        public FullHouse( IEnumerable<Card> triple, IEnumerable<Card> pair ) {
+            PrimaryPartialHand = new Triple( triple, new List<Card>() );
+            SecondaryPartialHand = new Pair( pair, new List<Card>() );
+            Cards = triple.Concat( pair );
         }
 
-        public IList<Card> Cards { get; }
-        public IHand PrimaryPartialHand => new Triple(Cards);
-        public IHand SecondaryPartialHand => new Pair(Cards);
+        public IEnumerable<Card> Cards { get; }
+        public IHand PrimaryPartialHand { get; }
+        public IHand SecondaryPartialHand { get; }
         public Rank Rank => Rank.FullHouse;
 
     }

@@ -2,7 +2,9 @@
     public enum Rank {
         None,
         Pair,
+        TwoPair,
         Triple,
-        FullHouse
+        FullHouse,
+        Quadruple
     }
 }

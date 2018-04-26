@@ -4,6 +4,8 @@
         Pair,
         TwoPair,
         Triple,
+        Straight,
+        Flush,
         FullHouse,
         Quadruple
     }

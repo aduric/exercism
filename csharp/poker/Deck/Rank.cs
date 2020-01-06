@@ -5,7 +5,6 @@ using System.Text;
 namespace Poker.Deck
 {
     public enum Rank {
-        Ace,
         One,
         Two,
         Three,
@@ -18,6 +17,7 @@ namespace Poker.Deck
         Ten,
         Jack,
         Queen,
-        King
+        King,
+        Ace
     }
 }
